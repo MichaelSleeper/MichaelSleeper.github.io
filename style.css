@@ -1,8 +1,9 @@
 body {
-  background: rgb(125, 198, 205);
-  color: rgb(45, 45, 45);
-  padding: 10px;
-  font-family: Arial, sans-serif;
+    background-image: url("https://media.tenor.com/oHFkLgbzWa4AAAAM/ausla-flight.gif");
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+  }
 }
 
 #all-contents {
@@ -47,7 +48,7 @@ a {
 
 /* main container area beneath menu */
 main {
-  background: red;
+  background: rgba(255, 0, 0, 0.5); /* red with 50% opacity */
   display: flex;
   margin-top: 20px;
 }
@@ -134,9 +135,12 @@ h3 {
   }
 
   .sidebar {
-    margin-right: 0px;
-    justify-content: center;
-    align-items: center;
+    margin-right: 25px;
+    padding: 10px;
+    width: 220px;
+    height: 220px;
+  position: relative;
+  overflow: hidden;
   }
 
   .sidebar-img {
