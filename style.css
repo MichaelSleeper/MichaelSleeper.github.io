@@ -1,9 +1,8 @@
 body {
-    background-image: url("https://media.tenor.com/oHFkLgbzWa4AAAAM/ausla-flight.gif");
-    background-position: center;
-    background-size: cover;
-    overflow: hidden;
-  }
+  background-image: url("https://media.tenor.com/oHFkLgbzWa4AAAAM/ausla-flight.gif");
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
 }
 
 #all-contents {
@@ -139,8 +138,8 @@ h3 {
     padding: 10px;
     width: 220px;
     height: 220px;
-  position: relative;
-  overflow: hidden;
+    position: relative;
+    overflow: hidden;
   }
 
   .sidebar-img {
@@ -162,9 +161,9 @@ h3 {
   position: fixed;
   bottom: 0;
   right: 0;
-  width: 60px;    /* Size of the clickable area */
+  width: 60px; /* Size of the clickable area */
   height: 60px;
-  opacity: 0;     /* Make it invisible */
+  opacity: 0; /* Make it invisible */
   z-index: 100000; /* Make sure it's on top */
   display: block;
 }
