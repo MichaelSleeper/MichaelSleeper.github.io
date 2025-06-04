@@ -165,7 +165,7 @@ h3 {
   width: 60px;    /* Size of the clickable area */
   height: 60px;
   opacity: 0;     /* Make it invisible */
-  z-index: 10000; /* Make sure it's on top */
+  z-index: 100000; /* Make sure it's on top */
   display: block;
 }
 
