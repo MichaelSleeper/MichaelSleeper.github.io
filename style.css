@@ -168,3 +168,8 @@ h3 {
   z-index: 10000; /* Make sure it's on top */
   display: block;
 }
+
+body {
+  background: url("https://static.wikia.nocookie.net/287504cd-29ab-4f5b-b613-5850a958998f/scale-to-width/755");
+  background-size: cover;
+}
