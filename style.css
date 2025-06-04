@@ -1,8 +1,8 @@
 body {
-  background-image: url("https://media.tenor.com/oHFkLgbzWa4AAAAM/ausla-flight.gif");
+  /* background-image: url("https://media.tenor.com/oHFkLgbzWa4AAAAM/ausla-flight.gif");
   background-position: center;
   background-size: cover;
-  overflow: hidden;
+  overflow: hidden; */
 }
 
 #all-contents {
@@ -171,4 +171,35 @@ h3 {
 body {
   background: url("https://static.wikia.nocookie.net/287504cd-29ab-4f5b-b613-5850a958998f/scale-to-width/755");
   background-size: cover;
+}
+
+#bottom-left-gif {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 500px; /* Adjust size as needed */
+  z-index: 10000;
+  pointer-events: none; /* So it doesn't block clicks */
+}
+
+#bottom-right-gif {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 300px; /* Change size as needed */
+  z-index: 10000;
+  pointer-events: none; /* So it doesn't block clicks */
+}
+
+#bottom-left-snake {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 10001;
+  width: 1000px;
+  height: 380px;
+}
+
+h1 {
+  text-shadow: 4px 4px 12px #222, 0 0 8px black;
 }
