@@ -22,27 +22,65 @@
 
       <main>
         <!-- Sidebar section -->
-        <div class=""sidebar">
-        <img id="dvd-gif" class="sidebar-img" src="https://media.tenor.com/3UbFhNAAIs8AAAAM/flight.gif">
-        </div>
+        <div class="sidebar"></div>
 
         <!-- Content section -->
-     <div class="content">
+        <div class="content">
           <h2>Michael</h2>
           <p>Student at Chalmette High School</p>
-        
-        <!--Interests section-->  
-        <div id="interests">
-          <h3>Interests</h3>
-          <ul>
-            <li>gaming</li>
-            <li>drawing</li>
-            <li>sleeping</li>
-          </ul>
+
+          <!--Interests section-->
+          <div id="interests">
+            <h3>Interests</h3>
+            <ul>
+              <li>gaming</li>
+              <li>drawing</li>
+              <li>sleeping</li>
+            </ul>
+          </div>
         </div>
-      </div>
-      </div>
       </main>
     </div>
+    <img
+      id="dvd-gif"
+      class="sidebar-img"
+      src="https://media.tenor.com/3UbFhNAAIs8AAAAM/flight.gif"
+      style="
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 200px; // change this to adjust size
+        z-index: 9999;
+        pointer-events: none;
+      "
+    />
+    <script>
+      const dvd = document.getElementById("dvd-gif");
+      let x = 0,
+        y = 0;
+      let dx = 5, // Increase for faster speed, decrease for slower
+        dy = 5; // Increase for faster speed, decrease for slower
+
+      function moveDVD() {
+        const maxX = window.innerWidth - dvd.clientWidth;
+        const maxY = window.innerHeight - dvd.clientHeight;
+
+        x += dx;
+        y += dy;
+
+        if (x <= 0 || x >= maxX) dx = -dx;
+        if (y <= 0 || y >= maxY) dy = -dy;
+
+        x = Math.max(0, Math.min(x, maxX));
+        y = Math.max(0, Math.min(y, maxY));
+
+        dvd.style.left = x + "px";
+        dvd.style.top = y + "px";
+
+        requestAnimationFrame(moveDVD);
+      }
+
+      moveDVD();
+    </script>
   </body>
 </html>
