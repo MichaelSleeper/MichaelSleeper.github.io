@@ -191,33 +191,18 @@ body {
   pointer-events: none; /* So it doesn't block clicks */
 }
 
-/* #bottom-left-snake {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  z-index: 10001;
-  width: 1000px;
-  height: 380px;
-}
-
-h1 {
-text-shadow: 4px 4px 12px #222, 0 0 8px black;
-}
-
-.curved-bg {
-  position: fixed;
+.sidebar-bg {
+  position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%; /* Fill the sidebar */
+  height: 100%;
   background: red;
-  z-index: -2;
-  /* Creates the inward curve to a point at the bottom center */
-clip-path: polygon(
-  0 0,
-  /* top left */ 100% 0,
-  /* top right */ 100% 80%,
-  /* right, near bottom */ 50% 100%,
-  /* bottom center (the point) */ 0 80% /* left, near bottom */
-);
-pointer-events: none;
+  z-index: -1;
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
+  pointer-events: none;
+}
+.sidebar {
+  position: relative; /* Needed for absolute positioning inside */
+  overflow: hidden; /* Hide overflow from the curve */
+}
