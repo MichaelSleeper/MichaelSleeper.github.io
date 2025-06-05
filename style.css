@@ -191,7 +191,7 @@ body {
   pointer-events: none; /* So it doesn't block clicks */
 }
 
-#bottom-left-snake {
+/* #bottom-left-snake {
   position: fixed;
   bottom: 0;
   left: 0;
@@ -202,4 +202,4 @@ body {
 
 h1 {
   text-shadow: 4px 4px 12px #222, 0 0 8px black;
-}
+} */
