@@ -201,5 +201,23 @@ body {
 }
 
 h1 {
-  text-shadow: 4px 4px 12px #222, 0 0 8px black;
-} */
+text-shadow: 4px 4px 12px #222, 0 0 8px black;
+}
+
+.curved-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: red;
+  z-index: -2;
+  /* Creates the inward curve to a point at the bottom center */
+clip-path: polygon(
+  0 0,
+  /* top left */ 100% 0,
+  /* top right */ 100% 80%,
+  /* right, near bottom */ 50% 100%,
+  /* bottom center (the point) */ 0 80% /* left, near bottom */
+);
+pointer-events: none;
