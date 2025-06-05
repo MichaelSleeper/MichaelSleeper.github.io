@@ -42,6 +42,26 @@
           </li>
         </ul>
       </nav>
+      <button
+        id="blackout-btn"
+        style="
+          position: fixed;
+          top: 20px;
+          left: 20px;
+          z-index: 1000000000000000000000000000000000000000000000;
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          background: red;
+          color: white;
+          border: none;
+          font-size: 24px;
+          cursor: pointer;
+          box-shadow: 0 2px 8px #0005;
+        "
+      >
+        &#9728;
+      </button>
 
       <main>
         <!-- Sidebar section -->
@@ -98,7 +118,7 @@
         left: 0;
         top: 0;
         width: 200px;
-        z-index: 9999999;
+        z-index: 10000;
         pointer-events: none;
       "
     />
@@ -135,5 +155,19 @@
       src="https://media.tenor.com/99AXePT55nsAAAAM/youtooz-big-chungus.gif"
       alt="Bottom Right GIF"
     />
+    <div id="blackout-overlay"></div>
+    <script>
+      const blackoutBtn = document.getElementById("blackout-btn");
+      const blackoutOverlay = document.getElementById("blackout-overlay");
+
+      blackoutBtn.onclick = function () {
+        if (blackoutOverlay.style.display === "block") {
+          blackoutOverlay.style.display = "none";
+        } else {
+          blackoutOverlay.style.display = "block";
+        }
+      };
+    </script>
+    <div id="blackout-overlay"></div>
   </body>
 </html>

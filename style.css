@@ -206,3 +206,30 @@ body {
   position: relative; /* Needed for absolute positioning inside */
   overflow: hidden; /* Hide overflow from the curve */
 }
+
+#blackout-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  z-index: 99999999; /* Higher than everything else */
+}
+
+#blackout-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 100000000; /* Even higher than overlay */
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: red;
+  color: white;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px #0005;
+}
