@@ -45,9 +45,11 @@ $(function () {
     createCollectable("max", 530, 70, 0.5, 0.5);
 
     // TODO 4 - Create Cannons
-    createCannon("left", 400, 2000);
-    createCannon("right", 800, 0.1);
+    createCannon("left", 400, 3000);
+    createCannon("right", 800, 0.000001);
     createCannon("top", 1130, 5000);
+    createCannon("bottom", 500, 1000);
+    createCannon("left", 250, 2000);
 
     //////////////////////////////////
     // ONLY CHANGE ABOVE THIS POINT //
