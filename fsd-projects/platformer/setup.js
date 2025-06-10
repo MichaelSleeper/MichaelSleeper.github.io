@@ -93,9 +93,15 @@ let animationDetails = {};
 
 var collectableList = {
   database: { image: "images/collectables/database.png" },
-  diamond: { image: "images/collectables/diamond-head.png" },
+  diamond: {
+    image:
+      "https://i.kym-cdn.com/entries/icons/facebook/000/051/961/hicover.jpg",
+  },
   grace: { image: "images/collectables/grace-head.png" },
   kennedi: { image: "images/collectables/kennedi-head.png" },
-  max: { image: "images/collectables/max-head.png" },
+  max: { image: "https://i.redd.it/c46onvjylz4b1.jpg" },
   steve: { image: "images/collectables/steve-head.png" },
+  flight: {
+    image: "https://media.tenor.com/I2PIlCwWK9MAAAAe/flight-freaky.png",
+  },
 };
