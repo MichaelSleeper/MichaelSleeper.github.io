@@ -10,6 +10,7 @@
         height: 70px;
         background-color: teal;
         font-size: 300%;
+        color: white;
         text-align: center;
         user-select: none;
         display: block;
@@ -17,6 +18,10 @@
         top: 100px;
         /* Change me! */
         left: 0px;
+        background-image: url("https://media.tenor.com/3UbFhNAAIs8AAAAM/flight.gif");
+        background-size: cover; /* Make GIF cover the board */
+        background-position: center; /* Center the GIF */
+        background-repeat: no-repeat;
       }
 
       .board {
@@ -25,6 +30,10 @@
         margin: 0;
         padding: 0;
         overflow: hidden;
+        background-image: url("https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExYWR2NmhmNnZ5MW85NTY4cG4xbDk4ZTZycmtsMnZ1d3h4M3VkOHg0NCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/l41lZok4O3z0Mna5q/giphy.webp");
+        background-size: cover; /* Make GIF cover the board */
+        background-position: center; /* Center the GIF */
+        background-repeat: no-repeat;
       }
     </style>
     <!-- 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
@@ -32,6 +41,7 @@
 
   <body class="board">
     <!-- HTML for the box -->
+    <div class="box">?</div>
     <div class="box">?</div>
 
     <script>
@@ -71,6 +81,13 @@
         var positionX = 0;
         var points = 0; //times box has been clicked
         var speed = 1; //speed of the box
+        var positionY;
+        var speedY;
+        var boardHeight = jQuery(window).height();
+        var randNum = Math.random() * 100;
+        var colorStr = "rgb(50, 25, 250)";
+        box.css("background-color", colorStr);
+        var randomNumberBetween0and10 = Math.random() * 10;
 
         /*
       This Function will be called 20 times/second. Each time it is called,
@@ -78,8 +95,10 @@
       turn it around!
       */
         function update() {
-          moveBoxTo(positionX); // Move the box to the current position
+          moveBoxTo(positionX, positionY); // Move the box to the current position
           positionX = positionX + speed; // Increase the position by speed
+          box.css("left", positionX);
+          box.css("top", positionY);
           if (positionX > boardWidth) {
             speed *= -1; // Reverse direction if it goes off the right side
           }
