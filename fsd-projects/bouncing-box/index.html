@@ -21,6 +21,10 @@
 
       .board {
         height: 100vh;
+        width: 96vw;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
       }
     </style>
     <!-- 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
@@ -65,6 +69,8 @@
 
         // TODO 2 - Variable declarations
         var positionX = 0;
+        var points = 0; //times box has been clicked
+        var speed = 1; //speed of the box
 
         /*
       This Function will be called 20 times/second. Each time it is called,
@@ -73,7 +79,14 @@
       */
         function update() {
           moveBoxTo(positionX); // Move the box to the current position
-          positionX = positionX + 1;
+          positionX = positionX + speed; // Increase the position by speed
+          if (positionX > boardWidth) {
+            speed *= -1; // Reverse direction if it goes off the right side
+          }
+
+          if (positionX < 0) {
+            speed *= -1; // Reverse direction if it goes off the left side
+          }
         }
 
         /*
@@ -83,7 +96,9 @@
       */
         function handleBoxClick() {
           positionX = 0; // Reset position to the left side
-          changeBoxText(0); // Change the text on the box
+          points++; // Increase the points by 1 each click
+          speed = 0.5 * points + 1;
+          changeBoxText(points); // Change the text on the box to show points
         }
       })();
     </script>

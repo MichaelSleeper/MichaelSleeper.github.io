@@ -65,9 +65,11 @@ var boardWidth = board.width();
 ```
 
 These lines pull HTML elements into JavaScript using jQuery selectors and methods, making it easier to manipulate the page. Although you aren’t required to know jQuery for this course, feel free to explore the [jQuery documentation](https://jquery.com) if you’re interested!
+
 </details>
 
 <!-- 4 line breaks between TODOs -->
+
 <br><br><br><br>
 
 # Lesson Steps
@@ -81,19 +83,21 @@ These lines pull HTML elements into JavaScript using jQuery selectors and method
 ### Step-by-Step Work Flow
 
 1. 📂 **Open your Bouncing Box project's `index.html` file** in your codespace to get started.
+
    - 🔍 Locate the file tree (the list of files and folders) in the left panel of your codespace.
    - Click the `projects` folder 📂 in your file tree to expand the list of projects.
    - Click on the `bouncing-box` folder 📂 located within the `projects` folder.
-   - Click on the `index.html` file located within the `bouncing-box` folder 📂. ***Coding for all steps will be done in this file.***
+   - Click on the `index.html` file located within the `bouncing-box` folder 📂. **_Coding for all steps will be done in this file._**
 
 2. **Follow the instructions carefully** for each TODO:
+
    - Pay attention to where new code should be added.
    - Only code inside the designated areas
-      - Make sure all code is added below the `YOUR CODE BELOW HERE` comment.
+     - Make sure all code is added below the `YOUR CODE BELOW HERE` comment.
 
 3. 🖥️ **Preview your game regularly using Live Server** to see how your changes affect the game level.
 
-4. **Important Note**: *None of the code provided in these instructions should be copied and pasted into your project*.
+4. **Important Note**: _None of the code provided in these instructions should be copied and pasted into your project_.
    - All code snippets are examples meant to guide you in writing your own code and provide a general description of what changes happen throughout the program.
 
 ---
@@ -122,6 +126,7 @@ These lines pull HTML elements into JavaScript using jQuery selectors and method
 - If you encounter issues, **preview your site** using Live Server to troubleshoot.
 
 <!-- 4 line breaks between TODOs -->
+
 <br><br><br><br>
 
 ## **TODO 0: Preview Your Site with Live Server**
@@ -154,6 +159,7 @@ There are two ways to open your project with **Live Server**:
   - Then navigate to your Bouncing Box project by clicking the Bouncing Box link.
 
 <!-- 4 line breaks between TODOs -->
+
 <br><br><br><br>
 
 <!-- TODO: add todo for toggling grid on -->
@@ -527,6 +533,7 @@ There are two ways to open your project with **Live Server**:
 1. **🔍 Locate the `update` Function**
 
 2. **Set Up an `if` Statement for the Left Boundary**
+
    - **Below the first `if` statement's code block**, add a second `if` or an `else if` statement to detect when `positionX` has moved too far to the left.
    - **Fill in the Blank**: Choose the correct comparison operator that will check if `positionX` is less than `0`. Choose either example below to use as a model for this step:
      ```javascript
@@ -581,8 +588,8 @@ There are two ways to open your project with **Live Server**:
 - There is currently a small bug 🐛 in your game.
 - Click on the box 2-3 times when it is moving to the right. You should notice it get faster.
 - Next, click on the box when it is moving to the left, **after** it has already bounced off the right wall.
-   - *What do you notice after clicking the box 2-3 times when it is moving left?*
-   - *Why does it make sense mathematically that the box slows down in this manner?*
+  - _What do you notice after clicking the box 2-3 times when it is moving left?_
+  - _Why does it make sense mathematically that the box slows down in this manner?_
 - This bug 🐛, where the box slows down when clicked, will be fixed in the next (and final) TODO.
 
 <!-- 4 line breaks between TODOs -->
@@ -621,6 +628,7 @@ In this TODO, we’ll fix the `speed` bug 🐛 by calculating `speed` using a li
 1. **🔍 Locate the `handleBoxClick` Function**
 
 2. **Remove the line of code** where speed is being increased by 3.
+
    - This line will be replaced by new code added in this TODO.
 
 3. **Understand How `speed` Changes with `points`**
@@ -635,11 +643,11 @@ In this TODO, we’ll fix the `speed` bug 🐛 by calculating `speed` using a li
    | 3          | `(3 * 3) + 10`    | 19        |
    | 4          | `(3 * 4) + 10`    | 22        |
 
-   - As `points` increases, this formula ensures that `speed` adjusts *linearly* without additional conditions.
+   - As `points` increases, this formula ensures that `speed` adjusts _linearly_ without additional conditions.
 
 4. **Apply the Linear Formula**
    - Add a line of code that reassigns `speed` to `3` times the value of `points` plus `10`.
-   - **Hint**: The equation below matches the required code ***exactly*** that will accomplish this step:
+   - **Hint**: The equation below matches the required code **_exactly_** that will accomplish this step:
      ```javascript
      speed = 3 * points + 10;
      ```
@@ -671,6 +679,7 @@ In this TODO, we’ll fix the `speed` bug 🐛 by calculating `speed` using a li
   - Click the box when it is moving from right to left. Ensure that the box does not slow down when this happens.
 
 <!-- 4 line breaks between TODOs -->
+
 <br><br><br><br>
 
 ## Explore Bonus Challenges
@@ -680,6 +689,7 @@ We've compiled a list of optional **bonus challenges** for you to take this proj
 - Access them on [GitHub here](https://github.com/OperationSpark/bouncing-box/blob/master/BONUS_CHALLENGES.md)
 
 <!-- 4 line breaks between TODOs -->
+
 <br><br><br><br>
 
 ## **TODO 9: Go Live**
