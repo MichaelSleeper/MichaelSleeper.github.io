@@ -103,7 +103,7 @@
           positionY = positionY + speedY;
 
           // Bounce horizontally
-          if (positionX + box.width() > boardWidth || positionX < 0) {
+          if (positionX > boardWidth || positionX < 0) {
             speed *= -1;
           }
 
