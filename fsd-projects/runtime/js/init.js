@@ -11,6 +11,8 @@ var init = function (window) {
     view = app.view,
     fps = draw.fps("#000");
 
+  createjs.Ticker.framerate = 60;
+
   var space,
     rules,
     ground,
