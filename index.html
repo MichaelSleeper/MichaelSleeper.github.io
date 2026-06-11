@@ -1,173 +1,23 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Mikey's Website</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-
-  <body>
-    <video
-      autoplay
-      muted
-      loop
-      playsinline
-      id="bg-video"
-      style="
-        position: fixed;
-        top: 0;
-        left: 0;
-        min-width: 100vw;
-        min-height: 100vh;
-        width: auto;
-        height: auto;
-        object-fit: cover;
-        z-index: -1;
-        pointer-events: none;
-      "
-    >
-      <source src="" type="video/webm" />
-      <!-- <source src="your-video.webm" type="video/mp4" /> -->
-      Your browser does not support the video tag.
-    </video>
-    <!-- All content goes here -->
-    <div id="all-contents">
-      <nav>
-        <h1>Mikey's Amazing Website</h1>
-        <ul id="nav-ul">
-          <li class="nav-li">
-            <a href="index.html">home</a>
-          </li>
-          <li class="nav-li">
-            <a href="portfolio.html">portfolio</a>
-          </li>
-        </ul>
-      </nav>
-      <button
-        id="blackout-btn"
-        style="
-          position: fixed;
-          top: 20px;
-          left: 20px;
-          z-index: 1000000000000000000000000000000000000000000000;
-          width: 60px;
-          height: 60px;
-          border-radius: 50%;
-          background: red;
-          color: white;
-          border: none;
-          font-size: 24px;
-          cursor: pointer;
-          box-shadow: 0 2px 8px #0005;
-        "
-      >
-        &#9728;
-      </button>
-
-      <main>
-        <!-- Sidebar section -->
-        <div class="sidebar"></div>
-        <div class="curved-bg"></div>
-
-        <!-- Content section -->
-        <div class="content">
-          <h2>Michael</h2>
-          <p>Student at Chalmette High School</p>
-
-          <!--Interests section-->
-          <div id="interests">
-            <h3>Interests</h3>
-            <ul>
-              <li>gaming</li>
-              <li>drawing</li>
-              <li>sleeping</li>
-            </ul>
-          </div>
-          <!-- Flappy Bird game window START -->
-          <div
-            style="
-              position: relative;
-              width: 340px;
-              height: 510px;
-              margin: 20px auto;
-              z-index: 10000001;
-            "
-          >
-            <iframe
-              src="https://nebezb.com/floppybird/"
-              width="340"
-              height="510"
-              style="
-                border: 2px solid #333;
-                border-radius: 12px;
-                background: #000;
-              "
-              title="Flappy Bird Game"
-              allow="autoplay"
-            ></iframe>
-          </div>
-          <!-- Flappy Bird game window END -->
-        </div>
-      </main>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Duck Parade</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="playground" aria-label="Duck playground">
+    <div class="button-row">
+      <button id="spawnDuckBtn" type="button">Spawn Duck</button>
+      <button id="spawnFiveBtn" type="button">Spawn 5</button>
+      <button id="spawnTenBtn" type="button">Spawn 10</button>
+      <button id="spawnTwentyFiveBtn" type="button">Spawn 25</button>
+      <button id="spawnFiftyBtn" type="button">Spawn 50</button>
+      <button id="spawnHundredBtn" type="button">Spawn 100</button>
     </div>
-    <img
-      id="dvd-gif"
-      class="sidebar-img"
-      src="https://media.tenor.com/3UbFhNAAIs8AAAAM/flight.gif"
-      style="
-        position: fixed;
-        left: 0;
-        top: 0;
-        width: 200px;
-        z-index: 10000;
-        pointer-events: none;
-      "
-    />
-    <script>
-      const dvd = document.getElementById("dvd-gif");
-      let x = 0,
-        y = 0;
-      let dx = 5, // Increase for faster speed, decrease for slower
-        dy = 5; // Increase for faster speed, decrease for slower
+  </div>
 
-      function moveDVD() {
-        const maxX = window.innerWidth - dvd.clientWidth;
-        const maxY = window.innerHeight - dvd.clientHeight;
-
-        x += dx;
-        y += dy;
-
-        if (x <= 0 || x >= maxX) dx = -dx;
-        if (y <= 0 || y >= maxY) dy = -dy;
-
-        x = Math.max(0, Math.min(x, maxX));
-        y = Math.max(0, Math.min(y, maxY));
-
-        dvd.style.left = x + "px";
-        dvd.style.top = y + "px";
-
-        requestAnimationFrame(moveDVD);
-      }
-
-      moveDVD();
-    </script>
-    <img
-      id="bottom-right-gif"
-      src="https://media.tenor.com/99AXePT55nsAAAAM/youtooz-big-chungus.gif"
-      alt="Bottom Right GIF"
-    />
-    <div id="blackout-overlay"></div>
-    <script>
-      const blackoutBtn = document.getElementById("blackout-btn");
-      const blackoutOverlay = document.getElementById("blackout-overlay");
-
-      blackoutBtn.onclick = function () {
-        if (blackoutOverlay.style.display === "block") {
-          blackoutOverlay.style.display = "none";
-        } else {
-          blackoutOverlay.style.display = "block";
-        }
-      };
-    </script>
-    <div id="blackout-overlay"></div>
-  </body>
+  <script src="script.js"></script>
+</body>
 </html>
