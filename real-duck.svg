@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="Realistic duck">
+  <defs>
+    <linearGradient id="bodyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f6d06d"/>
+      <stop offset="60%" stop-color="#e0b24d"/>
+      <stop offset="100%" stop-color="#b9852b"/>
+    </linearGradient>
+    <linearGradient id="wingGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f2c55d"/>
+      <stop offset="100%" stop-color="#bb7d16"/>
+    </linearGradient>
+    <linearGradient id="beakGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffb347"/>
+      <stop offset="100%" stop-color="#e58d1d"/>
+    </linearGradient>
+  </defs>
+
+  <ellipse cx="122" cy="128" rx="70" ry="56" fill="url(#bodyGrad)" stroke="#7a4f11" stroke-width="4"/>
+  <ellipse cx="88" cy="122" rx="34" ry="30" fill="url(#bodyGrad)" stroke="#7a4f11" stroke-width="4"/>
+  <path d="M52 118c-14-10-24-24-24-42 0-16 12-27 27-27 12 0 24 11 29 25-8 5-15 12-20 24-4 10-5 17-12 20z" fill="#f4d16b" stroke="#7a4f11" stroke-width="4"/>
+  <path d="M72 92l-30-16c-8-4-8-15 0-19l30-14" fill="none" stroke="#7a4f11" stroke-width="5" stroke-linecap="round"/>
+  <path d="M112 110c-14 0-24 5-30 14l-16 24c-4 6-1 14 5 17l24 9c6 2 13-1 15-8l9-28c2-8-2-16-10-18z" fill="url(#wingGrad)" stroke="#7a4f11" stroke-width="4"/>
+  <ellipse cx="162" cy="84" rx="34" ry="26" fill="url(#bodyGrad)" stroke="#7a4f11" stroke-width="4"/>
+  <path d="M188 74l34-18c6-3 12 2 11 9l-2 20c-1 7-8 12-15 10l-26-8c-4-1-6-6-3-13z" fill="url(#beakGrad)" stroke="#7a4f11" stroke-width="4"/>
+  <circle cx="170" cy="82" r="7" fill="#2f2417"/>
+  <circle cx="173" cy="80" r="2.5" fill="#fff"/>
+  <path d="M134 120c8 8 20 10 31 8" fill="none" stroke="#7a4f11" stroke-width="4" stroke-linecap="round"/>
+  <path d="M96 162c20 15 41 15 60 0" fill="none" stroke="#7a4f11" stroke-width="4" stroke-linecap="round"/>
+  <path d="M106 176c8 4 16 4 24 1" fill="none" stroke="#7a4f11" stroke-width="4" stroke-linecap="round"/>
+  <path d="M124 166c9 8 22 8 33 2" fill="none" stroke="#7a4f11" stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="116" cy="132" rx="18" ry="24" fill="#fff" opacity="0.18"/>
+  <path d="M148 74c6 7 16 10 24 9" fill="none" stroke="#a86f14" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
+</svg>
