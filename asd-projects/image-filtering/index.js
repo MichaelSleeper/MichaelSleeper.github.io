@@ -37,7 +37,7 @@ function applyFilter() {
     for (var j = 0; j < image[i].length; j++) {
       // loop through each pixel in the row
       var rgbString = image[i][j]; // get the RGB string for the current pixel
-      var rgbNumbers = rgbStringToArr(rgbString); // convert the RGB string to an array of numbers
+      var rgbNumbers = rgbStringToArray(rgbString); // convert the RGB string to an array of numbers
       console.log(image[i][j]);
     }
   }
