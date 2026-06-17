@@ -20,7 +20,8 @@ function resetAndRender() {
 // all of your apply functions
 function applyAndRender() {
   // Multiple TODOs: Call your apply function(s) here
-  applyFilter();
+  //applyFilter(reddify);
+  applyFilter(decreaseBlue);
 
   // do not change the below line of code
   render($("#display"), image);
@@ -31,7 +32,7 @@ function applyAndRender() {
 /////////////////////////////////////////////////////////
 
 // TODO 1, 2, 3 & 5: Create the applyFilter function here
-function applyFilter() {
+function applyFilter(filterFunction) {
   for (var i = 0; i < image.length; i++) {
     // loop through each row of the image
     for (var j = 0; j < image[i].length; j++) {
@@ -40,7 +41,7 @@ function applyFilter() {
       var rgbNumbers = rgbStringToArray(rgbString); // convert the RGB string to an array of numbers
       var pixel = image[i][j]; // get the current pixel
       var pixelArray = rgbStringToArray(pixel); // convert the pixel to an array of numbers
-      pixelArray[RED] = 200;
+      filterFunction(pixelArray); // apply the filter function to the pixel array
 
       var updatedPixel = rgbArrayToString(pixelArray); // convert the updated pixel back to an RGB string
       image[i][j] = updatedPixel; // update the pixel in the image with the new RGB string
@@ -52,9 +53,26 @@ function applyFilter() {
 // TODO 9 Create the applyFilterNoBackground function
 
 // TODO 6: Create the keepInBounds function
+function keepInBounds(value) {
+  return value < 0 ? 0 : value > 255 ? 255 : value;
+}
+
+/* console.log(keepInBounds(-20)); // should print 0
+console.log(keepInBounds(300)); // should print 255
+console.log(keepInBounds(125)); // should print 125 */
 
 // TODO 4: Create reddify filter function
+function reddify(pixelArray) {
+  pixelArray[RED] = 200;
+}
+
+/* var testArray = [100, 100, 100];
+reddify(testArray);
+console.log(testArray); // Should show [200, 100, 100] */
 
 // TODO 7 & 8: Create more filter functions
+function decreaseBlue(pixelArray) {
+  pixelArray[BLUE] = keepInBounds(pixelArray[BLUE] - 50);
+}
 
 // CHALLENGE code goes below here
