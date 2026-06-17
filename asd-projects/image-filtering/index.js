@@ -38,7 +38,12 @@ function applyFilter() {
       // loop through each pixel in the row
       var rgbString = image[i][j]; // get the RGB string for the current pixel
       var rgbNumbers = rgbStringToArray(rgbString); // convert the RGB string to an array of numbers
-      console.log(image[i][j]);
+      var pixel = image[i][j]; // get the current pixel
+      var pixelArray = rgbStringToArray(pixel); // convert the pixel to an array of numbers
+      var updatedPixel = rgbArrayToString(pixelArray); // convert the updated pixel back to an RGB string
+      image[i][j] = updatedPixel; // update the pixel in the image with the new RGB string
+      // This is where I’ll modify the color values later
+      //console.log(image[i][j]);
     }
   }
 }
